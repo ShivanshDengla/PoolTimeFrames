@@ -147,7 +147,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <RainbowKitProvider>
             <Component {...pageProps} />
             <FarcasterFrameProvider>
-              <Component {...pageProps} />
+              {/* Remove the duplicate Component render here */}
             </FarcasterFrameProvider>
           </RainbowKitProvider>
         </QueryClientProvider>
