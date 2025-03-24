@@ -36,6 +36,22 @@ const Layout = ({ children }: LayoutProps) => {
         <title>PoolTogether PoolTime.App</title>
         <meta content="Your all-in-one front end for PoolTogether V5." name="description" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        
+        {/* Farcaster Frame Meta Tag */}
+        <meta name="fc:frame" content='{
+          "version": "next",
+          "imageUrl": "https://pooltime.app/images/squarepool.png",
+          "button":{
+            "title": "Launch",
+            "action": {
+              "type": "launch_frame",
+              "name": "PoolTime",
+              "url": "https://pooltime.app",
+              "splashImageUrl": "https://pooltime.app/images/favicon.ico",
+              "splashBackgroundColor": "#7a67c4"
+            }
+          }
+        }' data-rh="true" />
       </Head>
       <div style={{ marginTop: "12px" }}>
         <main>

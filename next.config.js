@@ -6,6 +6,17 @@ const nextConfig = {
       domains: ['assets.coingecko.com','thegivingblock.com','uploads-ssl.webflow.com','token-icons.s3.amazonaws.com','app.cabana.fi','www.iconarchive.com','raw.githubusercontent.com']
     },
 
+  webpack: (config) => {
+    config.resolve.extensionAlias = {
+      '.js': ['.js', '.ts', '.tsx']
+    }
+    return config
+  },
+
+  transpilePackages: ['@farcaster/frame-sdk', '@farcaster/frame-wagmi-connector', '@farcaster/frame-core'],
+  experimental: {
+    esmExternals: 'loose'
+  }
 };
 
 module.exports = nextConfig;
